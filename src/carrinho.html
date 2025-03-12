@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Exotica - Ótica & Acessórios</title>
+    <meta name="description" content="Carrinho de compras da Exotica - Sua ótica de confiança com as melhores marcas e atendimento personalizado.">
+    <meta name="keywords" content="ótica, óculos, óculos de sol, óculos de grau, carrinho de compras">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Preload da logo para melhor performance -->
+    <link rel="preload" as="image" href="assets/images/logo/logoexotica_vetor.webp" type="image/webp">
+    <link rel="preload" as="image" href="assets/images/logo/logoexotica_vetor.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="Página inicial Exotica">
+                    <picture>
+                        <source srcset="assets/images/logo/logoexotica_vetor.webp" type="image/webp">
+                        <source srcset="assets/images/logo/logoexotica_vetor.png" type="image/png">
+                        <img 
+                            src="assets/images/logo/logoexotica_vetor.png" 
+                            alt="Exotica Logo"
+                            width="150"
+                            height="60"
+                            loading="lazy"
+                            decoding="async"
+                            fetchpriority="high"
+                        >
+                    </picture>
+                </a>
+            </div>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#" class="icon" aria-label="Buscar produtos">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </a>
+                <a href="conta.html" class="icon" aria-label="Minha conta">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                </a>
+                <a href="carrinho.html" class="icon active" aria-label="Carrinho de compras" aria-current="page">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count" aria-label="0 itens no carrinho">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Carrinho de Compras</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Carrinho</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-container">
+                <div class="cart-empty" id="cart-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h2>Seu carrinho está vazio</h2>
+                    <p>Adicione produtos ao seu carrinho para continuar comprando.</p>
+                    <a href="produtos.html" class="btn">Continuar Comprando</a>
+                </div>
+                
+                <div class="cart-items" id="cart-items" style="display: none;">
+                    <div class="cart-header">
+                        <div class="cart-header-item product-info">Produto</div>
+                        <div class="cart-header-item">Preço</div>
+                        <div class="cart-header-item">Quantidade</div>
+                        <div class="cart-header-item">Subtotal</div>
+                        <div class="cart-header-item">Ações</div>
+                    </div>
+                    
+                    <div class="cart-item-list" id="cart-item-list">
+                        <!-- Os itens do carrinho serão inseridos aqui via JavaScript -->
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <div class="coupon">
+                            <input type="text" placeholder="Código do cupom" id="coupon-code">
+                            <button class="btn btn-sm">Aplicar Cupom</button>
+                        </div>
+                        <button class="btn btn-outline" id="update-cart">Atualizar Carrinho</button>
+                    </div>
+                </div>
+                
+                <div class="cart-summary" id="cart-summary" style="display: none;">
+                    <h3>Resumo do Pedido</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Desconto</span>
+                        <span id="cart-discount">R$ 0,00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Frete</span>
+                        <span id="cart-shipping">Calculado no checkout</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="cart-total">R$ 0,00</span>
+                    </div>
+                    <a href="checkout.html" class="btn btn-primary btn-block" id="checkout-btn">Finalizar Compra</a>
+                    <a href="produtos.html" class="btn btn-outline btn-block">Continuar Comprando</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-products">
+        <div class="container">
+            <h2>Você também pode gostar</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/products/oculos1.jpg" alt="Óculos de Sol Ray-Ban Aviator" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Adicionar aos favoritos"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Visualizar produto"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="produto-detalhes.html">Óculos de Sol Ray-Ban Aviator</a></h3>
+                        <div class="product-price">
+                            <span class="price">R$ 599,00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/products/oculos2.jpg" alt="Óculos de Grau Oakley Crosslink" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Adicionar aos favoritos"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Visualizar produto"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="produto-detalhes.html">Óculos de Grau Oakley Crosslink</a></h3>
+                        <div class="product-price">
+                            <span class="price">R$ 799,00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/products/oculos3.jpg" alt="Óculos de Sol Prada Linea Rossa" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Adicionar aos favoritos"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Visualizar produto"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="produto-detalhes.html">Óculos de Sol Prada Linea Rossa</a></h3>
+                        <div class="product-price">
+                            <span class="price">R$ 1.299,00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/products/oculos4.jpg" alt="Óculos de Grau Tommy Hilfiger" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Adicionar aos favoritos"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Visualizar produto"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="Adicionar ao carrinho"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="produto-detalhes.html">Óculos de Grau Tommy Hilfiger</a></h3>
+                        <div class="product-price">
+                            <span class="price">R$ 699,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sobre a Exotica</h3>
+                    <p class="footer-description">Sua ótica de confiança com as melhores marcas e atendimento personalizado.</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="produtos.html">Óculos de Sol</a></li>
+                        <li><a href="produtos.html">Óculos de Grau</a></li>
+                        <li><a href="produtos.html">Acessórios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Nossas Lojas</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Americana: Rua Rui Barbosa, 331 – Centro</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Santa Bárbara d'Oeste: Av. São Paulo, 1722</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nova Odessa: Rua Aristeu Valente, 319</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Capivari: Rua Quinze de Novembro, 551</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> Americana: (19) 3471-0750</li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5519971620494?text=Olá!%20Vim%20do%20site%20da%20Exotica%20Ótica%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer">(19) 97162-0494</a></li>
+                        <li><i class="fas fa-envelope"></i> contato@exoticaotica.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg - Sex: 9h às 18h | Sáb: 9h às 13h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Exotica. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-pix"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5519971620494?text=Olá!%20Vim%20do%20site%20da%20Exotica%20Ótica%20e%20gostaria%20de%20mais%20informações." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contato via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

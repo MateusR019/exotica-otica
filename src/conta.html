@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - Exotica - Ótica & Acessórios</title>
+    <meta name="description" content="Gerencie sua conta na Exotica - Sua ótica de confiança com as melhores marcas e atendimento personalizado.">
+    <meta name="keywords" content="ótica, óculos, óculos de sol, óculos de grau, conta, perfil">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Preload da logo para melhor performance -->
+    <link rel="preload" as="image" href="assets/images/logo/logoexotica_vetor.webp" type="image/webp">
+    <link rel="preload" as="image" href="assets/images/logo/logoexotica_vetor.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="Página inicial Exotica">
+                    <picture>
+                        <source srcset="assets/images/logo/logoexotica_vetor.webp" type="image/webp">
+                        <source srcset="assets/images/logo/logoexotica_vetor.png" type="image/png">
+                        <img 
+                            src="assets/images/logo/logoexotica_vetor.png" 
+                            alt="Exotica Logo"
+                            width="150"
+                            height="60"
+                            loading="lazy"
+                            decoding="async"
+                            fetchpriority="high"
+                        >
+                    </picture>
+                </a>
+            </div>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#" class="icon" aria-label="Buscar produtos">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </a>
+                <a href="conta.html" class="icon active" aria-label="Minha conta" aria-current="page">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                </a>
+                <a href="carrinho.html" class="icon" aria-label="Carrinho de compras">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count" aria-label="0 itens no carrinho">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Minha Conta</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Minha Conta</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="account-section">
+        <div class="container">
+            <div class="account-container">
+                <div class="account-sidebar">
+                    <ul class="account-menu">
+                        <li><a href="#" class="active" data-tab="dashboard">Painel</a></li>
+                        <li><a href="#" data-tab="orders">Meus Pedidos</a></li>
+                        <li><a href="#" data-tab="addresses">Endereços</a></li>
+                        <li><a href="#" data-tab="details">Detalhes da Conta</a></li>
+                        <li><a href="#" data-tab="logout">Sair</a></li>
+                    </ul>
+                </div>
+                
+                <div class="account-content">
+                    <!-- Dashboard Tab -->
+                    <div class="account-tab active" id="dashboard">
+                        <h2>Painel</h2>
+                        <p>Olá, <span class="user-name">Usuário</span> (não é <span class="user-name">Usuário</span>? <a href="#">Sair</a>)</p>
+                        <p>No painel da sua conta, você pode visualizar seus <a href="#" data-tab-trigger="orders">pedidos recentes</a>, gerenciar seus <a href="#" data-tab-trigger="addresses">endereços de entrega</a> e <a href="#" data-tab-trigger="details">editar sua senha e detalhes da conta</a>.</p>
+                        
+                        <h3>Pedidos Recentes</h3>
+                        <div class="order-history">
+                            <div class="order-empty">
+                                <p>Você ainda não fez nenhum pedido.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Orders Tab -->
+                    <div class="account-tab" id="orders">
+                        <h2>Meus Pedidos</h2>
+                        <div class="order-history">
+                            <div class="order-empty">
+                                <p>Você ainda não fez nenhum pedido.</p>
+                            </div>
+                            
+                            <!-- Exemplo de pedido (será exibido quando houver pedidos) -->
+                            <div class="order-item" style="display: none;">
+                                <div class="order-header">
+                                    <div>
+                                        <p><strong>Pedido:</strong> #12345</p>
+                                        <p><strong>Data:</strong> 15/06/2025</p>
+                                    </div>
+                                    <div>
+                                        <span class="order-status status-delivered">Entregue</span>
+                                        <p><strong>Total:</strong> R$ 799,00</p>
+                                    </div>
+                                </div>
+                                <div class="order-products">
+                                    <div class="order-product">
+                                        <img src="assets/images/products/oculos1.jpg" alt="Óculos de Sol Ray-Ban Aviator">
+                                        <div>
+                                            <h4>Óculos de Sol Ray-Ban Aviator</h4>
+                                            <p>Quantidade: 1</p>
+                                            <p>R$ 599,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-actions">
+                                    <a href="#" class="btn btn-sm">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Addresses Tab -->
+                    <div class="account-tab" id="addresses">
+                        <h2>Endereços</h2>
+                        <div class="addresses-container">
+                            <div class="address-empty">
+                                <p>Você ainda não adicionou nenhum endereço.</p>
+                            </div>
+                            
+                            <div class="address-actions">
+                                <button class="btn" id="add-address-btn">Adicionar Novo Endereço</button>
+                            </div>
+                            
+                            <div class="address-form" style="display: none;">
+                                <h3>Adicionar Novo Endereço</h3>
+                                <form id="address-form">
+                                    <div class="form-group">
+                                        <label for="address-name">Nome Completo</label>
+                                        <input type="text" id="address-name" required>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address-cep">CEP</label>
+                                            <input type="text" id="address-cep" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address-number">Número</label>
+                                            <input type="text" id="address-number" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="address-street">Rua</label>
+                                        <input type="text" id="address-street" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="address-complement">Complemento</label>
+                                        <input type="text" id="address-complement">
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address-neighborhood">Bairro</label>
+                                            <input type="text" id="address-neighborhood" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address-city">Cidade</label>
+                                            <input type="text" id="address-city" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="address-state">Estado</label>
+                                        <select id="address-state" required>
+                                            <option value="">Selecione...</option>
+                                            <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn">Salvar Endereço</button>
+                                        <button type="button" class="btn btn-outline" id="cancel-address-btn">Cancelar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Details Tab -->
+                    <div class="account-tab" id="details">
+                        <h2>Detalhes da Conta</h2>
+                        <form id="account-details-form">
+                            <div class="form-group">
+                                <label for="account-name">Nome</label>
+                                <input type="text" id="account-name" value="Usuário" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="account-email">E-mail</label>
+                                <input type="email" id="account-email" value="usuario@exemplo.com" required>
+                            </div>
+                            
+                            <h3>Alterar Senha</h3>
+                            
+                            <div class="form-group">
+                                <label for="current-password">Senha Atual</label>
+                                <input type="password" id="current-password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">Nova Senha</label>
+                                <input type="password" id="new-password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-password">Confirmar Nova Senha</label>
+                                <input type="password" id="confirm-password">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn">Salvar Alterações</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sobre a Exotica</h3>
+                    <p class="footer-description">Sua ótica de confiança com as melhores marcas e atendimento personalizado.</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="produtos.html">Óculos de Sol</a></li>
+                        <li><a href="produtos.html">Óculos de Grau</a></li>
+                        <li><a href="produtos.html">Acessórios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Nossas Lojas</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Americana: Rua Rui Barbosa, 331 – Centro</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Santa Bárbara d'Oeste: Av. São Paulo, 1722</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nova Odessa: Rua Aristeu Valente, 319</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Capivari: Rua Quinze de Novembro, 551</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> Americana: (19) 3471-0750</li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5519971620494?text=Olá!%20Vim%20do%20site%20da%20Exotica%20Ótica%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer">(19) 97162-0494</a></li>
+                        <li><i class="fas fa-envelope"></i> contato@exoticaotica.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg - Sex: 9h às 18h | Sáb: 9h às 13h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Exotica. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-pix"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5519971620494?text=Olá!%20Vim%20do%20site%20da%20Exotica%20Ótica%20e%20gostaria%20de%20mais%20informações." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contato via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

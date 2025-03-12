@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Exotica Ótica</title>
+    <meta name="description" content="Conheça a história da Exotica Ótica, nossa missão, valores e compromisso com a qualidade e atendimento personalizado.">
+    <meta name="keywords" content="ótica, óculos, sobre nós, história, missão, valores, equipe">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Preload da logo para melhor performance -->
+    <link rel="preload" as="image" href="assets/images/logo/logoexotica_vetor.webp" type="image/webp">
+    <link rel="preload" as="image" href="assets/images/logo/logoexotica_vetor.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="Página inicial Exotica">
+                    <picture>
+                        <source srcset="assets/images/logo/logoexotica_vetor.webp" type="image/webp">
+                        <source srcset="assets/images/logo/logoexotica_vetor.png" type="image/png">
+                        <img 
+                            src="assets/images/logo/logoexotica_vetor.png" 
+                            alt="Exotica Logo"
+                            width="150"
+                            height="60"
+                            loading="lazy"
+                            decoding="async"
+                            fetchpriority="high"
+                        >
+                    </picture>
+                </a>
+            </div>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html" class="active" aria-current="page">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#" class="icon" aria-label="Buscar produtos">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </a>
+                <a href="conta.html" class="icon" aria-label="Minha conta">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                </a>
+                <a href="carrinho.html" class="icon" aria-label="Carrinho de compras">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Sobre a Exotica</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Início</a> / <span>Sobre Nós</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/about/2020-01-05.webp" alt="Nossa loja" width="500" height="350" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2>Nossa História</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+                    
+                    <h3>Missão</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                    
+                    <h3>Visão</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                    
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                        <li>Nullam in dui mauris vivamus hendrerit</li>
+                        <li>Arcu sed erat molestie vehicula</li>
+                        <li>Sed auctor neque eu tellus rhoncus</li>
+                        <li>Ut eleifend nibh porttitor ut in nulla enim</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="team-section">
+                <h2>Nossa Equipe</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="assets/images/about/optometrist.jpg" alt="Dr. Carlos Silva" width="250" height="250" loading="lazy">
+                        <h3>Dr. Carlos Silva</h3>
+                        <p>Optometrista</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/about/manager.jpg" alt="Ana Oliveira" width="250" height="250" loading="lazy">
+                        <h3>Ana Oliveira</h3>
+                        <p>Gerente</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/about/consultant.jpg" alt="Pedro Santos" width="250" height="250" loading="lazy">
+                        <h3>Pedro Santos</h3>
+                        <p>Consultor de Vendas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <div class="testimonial-items">
+                    <div class="testimonial">
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Atendimento excepcional e produtos de alta qualidade. Encontrei o óculos perfeito para mim com a ajuda da equipe.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/about/client1.jpg" alt="Maria Souza" width="60" height="60" loading="lazy">
+                            <div>
+                                <h4>Maria Souza</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Compro meus óculos na Exotica há anos e nunca me decepcionei. Produtos de qualidade e preços justos.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/about/client2.jpg" alt="João Pereira" width="60" height="60" loading="lazy">
+                            <div>
+                                <h4>João Pereira</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Inscreva-se em nossa Newsletter</h2>
+                <p>Receba novidades, promoções exclusivas e dicas de cuidados com seus óculos</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="btn">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <h2>Exotica</h2>
+                        <p>Ótica & Acessórios</p>
+                    </div>
+                    <p class="footer-description">Oferecendo produtos de alta qualidade e atendimento personalizado desde 2010.</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="produtos.html?categoria=sol">Óculos de Sol</a></li>
+                        <li><a href="produtos.html?categoria=grau">Óculos de Grau</a></li>
+                        <li><a href="produtos.html?categoria=acessorios">Acessórios</a></li>
+                        <li><a href="produtos.html?categoria=infantil">Linha Infantil</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Nossas Lojas</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Americana: Rua Rui Barbosa, 331 – Centro</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Santa Bárbara d'Oeste: Av. São Paulo, 1722</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nova Odessa: Rua Aristeu Valente, 319</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Capivari: Rua Quinze de Novembro, 551</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> Americana: (19) 3471-0750</li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5519971620494?text=Olá!%20Vim%20do%20site%20da%20Exotica%20Ótica%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer">(19) 97162-0494</a></li>
+                        <li><i class="fas fa-envelope"></i> contato@exoticaotica.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg - Sex: 9h às 18h | Sáb: 9h às 13h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Exotica Ótica. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-pix"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

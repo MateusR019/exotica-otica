@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto - Exotica</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logoexotica_vetor.png" alt="Exotica Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="
+                        index.html">Home</a></li>
+                    <li><a href="produtos.html" class="active">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#" class="icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / 
+                <a href="produtos.html">Produtos</a> / 
+                <span>Óculos de Sol Ray-Ban Aviador</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="images/products/rayban-aviador-1.jpg" alt="Ray-Ban Aviador" id="main-img">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="images/products/rayban-aviador-1.jpg" alt="Ray-Ban Aviador 1" class="active">
+                        <img src="images/products/rayban-aviador-2.jpg" alt="Ray-Ban Aviador 2">
+                        <img src="images/products/rayban-aviador-3.jpg" alt="Ray-Ban Aviador 3">
+                        <img src="images/products/rayban-aviador-4.jpg" alt="Ray-Ban Aviador 4">
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1>Óculos de Sol Ray-Ban Aviador</h1>
+                    <div class="product-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(32 avaliações)</span>
+                        </div>
+                        <div class="sku">SKU: RB3025-001/51</div>
+                    </div>
+                    <div class="price">
+                        <span class="current">R$ 899,00</span>
+                        <span class="old">R$ 999,00</span>
+                        <span class="discount">-10%</span>
+                    </div>
+                    <div class="description">
+                        <p>O Ray-Ban Aviador é um ícone atemporal que combina ótimo estilo com qualidade excepcional. Armação em metal dourado com lentes em cristal verde G-15.</p>
+                    </div>
+
+                    <!-- Product Options -->
+                    <div class="product-options">
+                        <div class="option-group">
+                            <h3>Tamanho</h3>
+                            <div class="size-options">
+                                <button class="size-btn">58mm</button>
+                                <button class="size-btn active">62mm</button>
+                                <button class="size-btn">64mm</button>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <h3>Cor da Armação</h3>
+                            <div class="color-options">
+                                <button class="color-btn" style="background-color: #FFD700" title="Dourado"></button>
+                                <button class="color-btn active" style="background-color: #C0C0C0" title="Prata"></button>
+                                <button class="color-btn" style="background-color: #000000" title="Preto"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="add-to-cart">
+                        <div class="quantity">
+                            <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                        <button class="btn btn-outline favorite"><i class="far fa-heart"></i></button>
+                    </div>
+
+                    <!-- Product Features -->
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantia de 2 anos</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Frete Grátis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>30 dias para troca</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description">Descrição</button>
+                    <button class="tab-btn" data-tab="specifications">Especificações</button>
+                    <button class="tab-btn" data-tab="reviews">Avaliações</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="description">
+                        <h3>Sobre o Produto</h3>
+                        <p>O Ray-Ban Aviador original foi projetado para aviadores militares dos EUA em 1937. Hoje é um ícone da moda que transcende gerações. A armação em metal fino e as lentes em formato de gota são instantaneamente reconhecíveis.</p>
+                        <ul>
+                            <li>Lentes em cristal verde G-15</li>
+                            <li>Proteção UV400</li>
+                            <li>Armação em metal de alta qualidade</li>
+                            <li>Plaquetas ajustáveis</li>
+                            <li>Hastes com ponteiras em acetato</li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel" id="specifications">
+                        <table class="specs-table">
+                            <tr>
+                                <th>Marca</th>
+                                <td>Ray-Ban</td>
+                            </tr>
+                            <tr>
+                                <th>Modelo</th>
+                                <td>Aviador Classic</td>
+                            </tr>
+                            <tr>
+                                <th>Material da Armação</th>
+                                <td>Metal</td>
+                            </tr>
+                            <tr>
+                                <th>Material das Lentes</th>
+                                <td>Cristal</td>
+                            </tr>
+                            <tr>
+                                <th>Proteção UV</th>
+                                <td>UV400</td>
+                            </tr>
+                            <tr>
+                                <th>Dimensões</th>
+                                <td>62-14-140</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-panel" id="reviews">
+                        <div class="reviews-summary">
+                            <div class="average-rating">
+                                <h3>4.5</h3>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>Baseado em 32 avaliações</p>
+                            </div>
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <span>5 estrelas</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 70%"></div>
+                                    </div>
+                                    <span>24</span>
+                                </div>
+                                <!-- Repeat for other ratings -->
+                            </div>
+                        </div>
+                        <div class="reviews-list">
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <img src="images/avatar.jpg" alt="João Silva">
+                                        <div>
+                                            <h4>João Silva</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="review-date">15/03/2024</span>
+                                </div>
+                                <p class="review-text">Excelente produto! A qualidade Ray-Ban é incomparável. O modelo aviador é clássico e combina com qualquer ocasião.</p>
+                            </div>
+                            <!-- More reviews -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>Produtos Relacionados</h2>
+                <div class="products">
+                    <!-- Product cards similar to the main product listing -->
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="images/products/rayban-wayfarer.jpg" alt="Ray-Ban Wayfarer">
+                            <div class="product-tags">
+                                <span class="tag bestseller">Mais Vendido</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="far fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="action-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Ray-Ban Wayfarer</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(28)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current">R$ 799,00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More related products -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Inscreva-se em Nossa Newsletter</h2>
+                <p>Receba novidades, ofertas exclusivas e dicas de cuidados com seus óculos.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button type="submit" class="btn">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sobre a Exotica</h3>
+                    <p class="footer-description">Sua ótica de confiança com as melhores marcas e atendimento personalizado.</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="#">Óculos de Sol</a></li>
+                        <li><a href="#">Óculos de Grau</a></li>
+                        <li><a href="#">Lentes de Contato</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rua Example, 123<br>São Paulo - SP</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(11) 1234-5678</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@exotica.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Exotica. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-pix"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
