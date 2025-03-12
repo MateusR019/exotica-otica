@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Exotica - Ótica & Acessórios</title>
     <meta name="description" content="Exotica - Sua ótica de confiança com as melhores marcas e atendimento personalizado. Óculos de sol, óculos de grau e lentes de contato.">
     <meta name="keywords" content="ótica, óculos, óculos de sol, óculos de grau, lentes de contato, acessórios">
@@ -35,12 +35,16 @@
             </div>
             <nav aria-label="Menu principal">
                 <ul>
-                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="index.html" class="active" aria-current="page">Início</a></li>
                     <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
                     <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
                 </ul>
             </nav>
+            <button class="menu-mobile-btn" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="icons">
                 <a href="#" class="icon" aria-label="Buscar produtos">
                     <i class="fas fa-search" aria-hidden="true"></i>
@@ -314,6 +318,32 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <div class="overlay"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-mobile-btn');
+            const nav = document.querySelector('nav');
+            const overlay = document.querySelector('.overlay');
+
+            menuBtn.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+
+            function toggleMenu() {
+                nav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+            }
+
+            // Fechar menu ao clicar em um link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
