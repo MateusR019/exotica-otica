@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Exotica Ótica</title>
+    <meta name="description" content="Agende sua consulta oftalmológica na Exotica Ótica. Atendimento personalizado e profissionais qualificados.">
+    <meta name="keywords" content="agendamento, consulta, oftalmologista, ótica, exame de vista">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preload" as="image" href="assets/images/logo/logoexotica_vetor.webp" type="image/webp">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="Página inicial Exotica">
+                    <picture>
+                        <source srcset="assets/images/logo/logoexotica_vetor.webp" type="image/webp">
+                        <source srcset="assets/images/logo/logoexotica_vetor.png" type="image/png">
+                        <img 
+                            src="assets/images/logo/logoexotica_vetor.png" 
+                            alt="Exotica Logo"
+                            width="150"
+                            height="60"
+                            loading="lazy"
+                            decoding="async"
+                            fetchpriority="high"
+                        >
+                    </picture>
+                </a>
+            </div>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendamento.html" class="active" aria-current="page">Agendamento</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#" class="icon" aria-label="Buscar produtos">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="conta.html" class="icon" aria-label="Minha conta">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="carrinho.html" class="icon" aria-label="Carrinho de compras">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Agende sua Consulta</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Início</a> / <span>Agendamento</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-grid">
+                <div class="appointment-info">
+                    <h2>Por que agendar uma consulta?</h2>
+                    <div class="benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-user-md"></i>
+                            <h3>Profissionais Qualificados</h3>
+                            <p>Nossa equipe é composta por oftalmologistas experientes e certificados.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-clock"></i>
+                            <h3>Horários Flexíveis</h3>
+                            <p>Disponibilidade de horários que se adequam à sua rotina.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-glasses"></i>
+                            <h3>Exames Completos</h3>
+                            <p>Realizamos uma avaliação completa da sua saúde visual.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appointment-form">
+                    <form id="scheduleForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Data Preferencial</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Horário Preferencial</label>
+                            <select id="time" name="time" required>
+                                <option value="">Selecione um horário</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="type">Tipo de Consulta</label>
+                            <select id="type" name="type" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="primeira">Primeira Consulta</option>
+                                <option value="retorno">Retorno</option>
+                                <option value="emergencia">Emergência</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Observações</label>
+                            <textarea id="notes" name="notes" rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i> Agendar Consulta
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Exotica Ótica</h3>
+                    <p>Sua visão é nossa prioridade.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-phone"></i> (XX) XXXX-XXXX</p>
+                    <p><i class="fas fa-envelope"></i> contato@exoticaotica.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Exotica Ótica. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
