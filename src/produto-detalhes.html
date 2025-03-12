@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Detalhes do Produto - Exotica Ótica</title>
-    <meta name="description" content="Óculos de Sol Ray-Ban Aviador - Estilo clássico e proteção UV de qualidade. Compre agora com garantia e frete grátis.">
+    <meta name="description" content="Detalhes completos do produto, incluindo especificações, preços e opções de compra na Exotica Ótica.">
     <meta name="keywords" content="Ray-Ban, aviador, óculos de sol, óculos de marca, proteção UV">
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
@@ -14,7 +14,7 @@
     <link rel="preload" as="image" href="assets/images/logo/logoexotica_vetor.png" type="image/png">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html" aria-label="Página inicial Exotica">
@@ -28,65 +28,68 @@
                             height="60"
                             loading="lazy"
                             decoding="async"
-                            fetchpriority="high"
                         >
                     </picture>
                 </a>
             </div>
-            <nav aria-label="Menu principal">
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="produtos.html" class="active">Produtos</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
                 </ul>
             </nav>
-            <div class="icons">
-                <a href="#" class="icon" aria-label="Buscar produtos">
-                    <i class="fas fa-search" aria-hidden="true"></i>
+            <div class="header-actions">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a href="conta.html" class="account-btn">
+                    <i class="fas fa-user"></i>
                 </a>
-                <a href="conta.html" class="icon" aria-label="Minha conta">
-                    <i class="fas fa-user" aria-hidden="true"></i>
-                </a>
-                <a href="carrinho.html" class="icon" aria-label="Carrinho de compras">
-                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                <a href="carrinho.html" class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
                     <span class="cart-count">0</span>
                 </a>
+                <button class="menu-mobile-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <div class="page-header">
+    <main class="product-details">
         <div class="container">
-            <div class="breadcrumb">
-                <a href="index.html">Home</a> / 
-                <a href="produtos.html">Produtos</a> / 
-                <span>Óculos de Sol Ray-Ban Aviador</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Product Details -->
-    <section class="product-details">
-        <div class="container">
-            <div class="product-grid">
-                <!-- Product Gallery -->
+            <div class="product-details-grid">
+                <!-- Galeria de Imagens -->
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="assets/images/products/rayban.jpg" alt="Ray-Ban Aviador" id="main-img" width="500" height="350" loading="lazy">
+                        <img src="assets/images/products/rayban-aviador.jpg" alt="Óculos Ray-Ban Aviador" id="main-product-image">
                     </div>
-                    <div class="thumbnail-images">
-                        <img src="assets/images/products/rayban.jpg" alt="Ray-Ban Aviador 1" class="active" width="100" height="70" loading="lazy">
-                        <img src="assets/images/products/oakley.jpg" alt="Ray-Ban Aviador 2" width="100" height="70" loading="lazy">
-                        <img src="assets/images/products/prada.jpg" alt="Ray-Ban Aviador 3" width="100" height="70" loading="lazy">
-                        <img src="assets/images/products/gucci.jpg" alt="Ray-Ban Aviador 4" width="100" height="70" loading="lazy">
+                    <div class="thumbnail-list">
+                        <button class="thumbnail active">
+                            <img src="assets/images/products/rayban-aviador.jpg" alt="Vista frontal">
+                        </button>
+                        <button class="thumbnail">
+                            <img src="assets/images/products/rayban-aviador-2.jpg" alt="Vista lateral">
+                        </button>
+                        <button class="thumbnail">
+                            <img src="assets/images/products/rayban-aviador-3.jpg" alt="Vista em uso">
+                        </button>
                     </div>
                 </div>
 
-                <!-- Product Info -->
+                <!-- Informações do Produto -->
                 <div class="product-info">
-                    <h1>Óculos de Sol Ray-Ban Aviador</h1>
+                    <nav class="breadcrumb">
+                        <a href="index.html">Home</a> /
+                        <a href="produtos.html">Produtos</a> /
+                        <span>Óculos Ray-Ban Aviador</span>
+                    </nav>
+
+                    <h1 class="product-title">Óculos Ray-Ban Aviador</h1>
+                    
                     <div class="product-meta">
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -94,273 +97,228 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
-                            <span>(32 avaliações)</span>
+                            <span>(4.5)</span>
                         </div>
-                        <div class="sku">SKU: RB3025-001/51</div>
-                    </div>
-                    <div class="price">
-                        <span class="current">R$ 899,00</span>
-                        <span class="old">R$ 999,00</span>
-                        <span class="discount">-10%</span>
-                    </div>
-                    <div class="description">
-                        <p>O Ray-Ban Aviador é um ícone atemporal que combina ótimo estilo com qualidade excepcional. Armação em metal dourado com lentes em cristal verde G-15.</p>
+                        <span class="product-code">Código: RB3025</span>
                     </div>
 
-                    <!-- Product Options -->
+                    <div class="product-price">
+                        <div class="price-info">
+                            <span class="old-price">R$ 799,90</span>
+                            <span class="current-price">R$ 599,90</span>
+                        </div>
+                        <div class="installment-info">
+                            em até 10x de R$ 59,99 sem juros
+                        </div>
+                    </div>
+
                     <div class="product-options">
                         <div class="option-group">
-                            <h3>Tamanho</h3>
-                            <div class="size-options">
-                                <button class="size-btn">58mm</button>
-                                <button class="size-btn active">62mm</button>
-                                <button class="size-btn">64mm</button>
-                            </div>
-                        </div>
-                        <div class="option-group">
-                            <h3>Cor da Armação</h3>
+                            <label>Cor da Armação</label>
                             <div class="color-options">
-                                <button class="color-btn" style="background-color: #FFD700" title="Dourado"></button>
-                                <button class="color-btn active" style="background-color: #C0C0C0" title="Prata"></button>
-                                <button class="color-btn" style="background-color: #000000" title="Preto"></button>
+                                <button class="color-option active" style="background-color: #FFD700" title="Dourado"></button>
+                                <button class="color-option" style="background-color: #C0C0C0" title="Prata"></button>
+                                <button class="color-option" style="background-color: #000000" title="Preto"></button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Tamanho</label>
+                            <div class="size-options">
+                                <button class="size-option">58mm</button>
+                                <button class="size-option active">62mm</button>
+                                <button class="size-option">64mm</button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Add to Cart -->
                     <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
                         <button class="btn btn-primary add-to-cart">
-                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao Carrinho
                         </button>
-                        <button class="btn btn-outline add-to-wishlist">
-                            <i class="far fa-heart"></i> Adicionar aos Favoritos
+                        <button class="btn btn-outline favorite">
+                            <i class="far fa-heart"></i>
                         </button>
                     </div>
 
-                    <!-- Product Features -->
-                    <div class="product-features">
-                        <div class="feature">
+                    <div class="product-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-truck-fast"></i>
+                            <div>
+                                <h4>Frete Grátis</h4>
+                                <p>Para todo o Brasil</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
                             <i class="fas fa-shield-alt"></i>
-                            <span>Garantia de 2 anos</span>
+                            <div>
+                                <h4>Garantia de 2 Anos</h4>
+                                <p>Contra defeitos</p>
+                            </div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-truck"></i>
-                            <span>Frete Grátis</span>
-                        </div>
-                        <div class="feature">
+                        <div class="benefit">
                             <i class="fas fa-exchange-alt"></i>
-                            <span>30 dias para troca</span>
+                            <div>
+                                <h4>Troca Grátis</h4>
+                                <p>Em até 30 dias</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Product Tabs -->
+            <!-- Descrição e Detalhes -->
             <div class="product-tabs">
                 <div class="tabs-header">
                     <button class="tab-btn active" data-tab="description">Descrição</button>
                     <button class="tab-btn" data-tab="specifications">Especificações</button>
                     <button class="tab-btn" data-tab="reviews">Avaliações</button>
                 </div>
-                <div class="tabs-content">
-                    <div class="tab-panel active" id="description">
-                        <h3>Sobre o Produto</h3>
-                        <p>O Ray-Ban Aviador original foi projetado para aviadores militares dos EUA em 1937. Hoje é um ícone da moda que transcende gerações. A armação em metal fino e as lentes em formato de gota são instantaneamente reconhecíveis.</p>
-                        <ul>
-                            <li>Lentes em cristal verde G-15</li>
-                            <li>Proteção UV400</li>
-                            <li>Armação em metal de alta qualidade</li>
-                            <li>Plaquetas ajustáveis</li>
-                            <li>Hastes com ponteiras em acetato</li>
-                        </ul>
-                    </div>
-                    <div class="tab-panel" id="specifications">
-                        <table class="specs-table">
-                            <tr>
-                                <th>Marca</th>
-                                <td>Ray-Ban</td>
-                            </tr>
-                            <tr>
-                                <th>Modelo</th>
-                                <td>Aviador Classic</td>
-                            </tr>
-                            <tr>
-                                <th>Material da Armação</th>
-                                <td>Metal</td>
-                            </tr>
-                            <tr>
-                                <th>Material das Lentes</th>
-                                <td>Cristal</td>
-                            </tr>
-                            <tr>
-                                <th>Proteção UV</th>
-                                <td>UV400</td>
-                            </tr>
-                            <tr>
-                                <th>Dimensões</th>
-                                <td>62-14-140</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="tab-panel" id="reviews">
-                        <div class="reviews-summary">
-                            <div class="average-rating">
-                                <h3>4.5</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <p>Baseado em 32 avaliações</p>
+
+                <div class="tab-content active" id="description">
+                    <h2>Sobre o Produto</h2>
+                    <p>O Ray-Ban Aviador é um ícone atemporal que transcende gerações. Criado originalmente para pilotos da força aérea americana, hoje é um símbolo de estilo e sofisticação. Com sua armação dourada e lentes em cristal, oferece proteção UV400 e um visual inconfundível.</p>
+                    
+                    <h3>Características Principais</h3>
+                    <ul>
+                        <li>Armação em metal de alta qualidade</li>
+                        <li>Lentes em cristal com proteção UV400</li>
+                        <li>Plaquetas ajustáveis para maior conforto</li>
+                        <li>Design clássico e atemporal</li>
+                        <li>Hastes com ponteiras emborrachadas</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="specifications">
+                    <table class="specs-table">
+                        <tr>
+                            <th>Marca</th>
+                            <td>Ray-Ban</td>
+                        </tr>
+                        <tr>
+                            <th>Modelo</th>
+                            <td>Aviador RB3025</td>
+                        </tr>
+                        <tr>
+                            <th>Material da Armação</th>
+                            <td>Metal</td>
+                        </tr>
+                        <tr>
+                            <th>Material das Lentes</th>
+                            <td>Cristal</td>
+                        </tr>
+                        <tr>
+                            <th>Proteção UV</th>
+                            <td>UV400</td>
+                        </tr>
+                        <tr>
+                            <th>Tamanhos Disponíveis</th>
+                            <td>58mm, 62mm, 64mm</td>
+                        </tr>
+                        <tr>
+                            <th>Peso</th>
+                            <td>150g</td>
+                        </tr>
+                        <tr>
+                            <th>Garantia</th>
+                            <td>2 anos</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" id="reviews">
+                    <div class="reviews-summary">
+                        <div class="average-rating">
+                            <h3>4.5</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="rating-bars">
-                                <div class="rating-bar">
-                                    <span>5 estrelas</span>
-                                    <div class="bar">
-                                        <div class="fill" style="width: 70%"></div>
-                                    </div>
-                                    <span>24</span>
+                            <p>Baseado em 128 avaliações</p>
+                        </div>
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span>5 estrelas</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 75%"></div>
                                 </div>
-                                <!-- Repeat for other ratings -->
+                                <span>75%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 estrelas</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 15%"></div>
+                                </div>
+                                <span>15%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 estrelas</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 7%"></div>
+                                </div>
+                                <span>7%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 estrelas</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 2%"></div>
+                                </div>
+                                <span>2%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 estrela</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 1%"></div>
+                                </div>
+                                <span>1%</span>
                             </div>
                         </div>
-                        <div class="reviews-list">
-                            <div class="review">
-                                <div class="review-header">
-                                    <div class="reviewer">
-                                        <img src="images/avatar.jpg" alt="João Silva">
-                                        <div>
-                                            <h4>João Silva</h4>
-                                            <div class="stars">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
+                    </div>
+
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <img src="assets/images/avatars/user1.jpg" alt="Maria S." class="reviewer-avatar">
+                                    <div>
+                                        <h4>Maria S.</h4>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
                                         </div>
                                     </div>
-                                    <span class="review-date">15/03/2025</span>
                                 </div>
-                                <p class="review-text">Excelente produto! A qualidade Ray-Ban é incomparável. O modelo aviador é clássico e combina com qualquer ocasião.</p>
+                                <span class="review-date">15/03/2024</span>
                             </div>
-                            <!-- More reviews -->
+                            <p class="review-text">Óculos incrível! A qualidade é excepcional e o conforto é surpreendente. Uso há um mês e não tenho do que reclamar.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Related Products -->
-            <div class="related-products">
-                <h2>Produtos Relacionados</h2>
-                <div class="products">
-                    <!-- Product cards similar to the main product listing -->
-                    <div class="product">
-                        <div class="product-image">
-                            <img src="assets/images/products/oakley.jpg" alt="Oakley Holbrook">
-                            <div class="product-tags">
-                                <span class="tag bestseller">Mais Vendido</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="action-btn"><i class="far fa-heart"></i></button>
-                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                                <button class="action-btn"><i class="fas fa-search"></i></button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Oakley Holbrook</h3>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>(28)</span>
-                            </div>
-                            <div class="price">
-                                <span class="current">R$ 750,00</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="product">
-                        <div class="product-image">
-                            <img src="assets/images/products/prada.jpg" alt="Prada Linea Rossa">
-                            <div class="product-tags">
-                                <span class="tag new">Novo</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="action-btn"><i class="far fa-heart"></i></button>
-                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                                <button class="action-btn"><i class="fas fa-search"></i></button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Prada Linea Rossa</h3>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>(56)</span>
-                            </div>
-                            <div class="price">
-                                <span class="current">R$ 1.250,00</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="product">
-                        <div class="product-image">
-                            <img src="assets/images/products/gucci.jpg" alt="Gucci GG0010S">
-                            <div class="product-tags">
-                                <span class="tag discount">-15%</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="action-btn"><i class="far fa-heart"></i></button>
-                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                                <button class="action-btn"><i class="fas fa-search"></i></button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Gucci GG0010S</h3>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>(78)</span>
-                            </div>
-                            <div class="price">
-                                <span class="current">R$ 1.690,00</span>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Produtos Relacionados -->
+            <section class="related-products">
+                <h2 class="section-title">Produtos Relacionados</h2>
+                <div class="products-grid">
+                    <!-- Produtos relacionados serão inseridos aqui via JavaScript -->
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </main>
 
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Inscreva-se em Nossa Newsletter</h2>
-                <p>Receba novidades, ofertas exclusivas e dicas de cuidados com seus óculos.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Seu melhor e-mail">
-                    <button type="submit" class="btn">Inscrever-se</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
@@ -445,6 +403,107 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <div class="overlay"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu Mobile
+            const menuBtn = document.querySelector('.menu-mobile-btn');
+            const nav = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+
+            menuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            overlay.addEventListener('click', () => {
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+
+            // Galeria de Imagens
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('main-product-image');
+
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', () => {
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                    mainImage.src = thumb.querySelector('img').src;
+                });
+            });
+
+            // Tabs
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.dataset.tab;
+                    
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    btn.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // Quantidade
+            const minusBtn = document.querySelector('.minus');
+            const plusBtn = document.querySelector('.plus');
+            const quantityInput = document.querySelector('.quantity-selector input');
+
+            minusBtn.addEventListener('click', () => {
+                const currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            });
+
+            plusBtn.addEventListener('click', () => {
+                const currentValue = parseInt(quantityInput.value);
+                if (currentValue < 10) {
+                    quantityInput.value = currentValue + 1;
+                }
+            });
+
+            // Opções de Cor e Tamanho
+            const colorOptions = document.querySelectorAll('.color-option');
+            const sizeOptions = document.querySelectorAll('.size-option');
+
+            colorOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    colorOptions.forEach(o => o.classList.remove('active'));
+                    option.classList.add('active');
+                });
+            });
+
+            sizeOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    sizeOptions.forEach(o => o.classList.remove('active'));
+                    option.classList.add('active');
+                });
+            });
+
+            // Adicionar ao Carrinho
+            const addToCartBtn = document.querySelector('.add-to-cart');
+            addToCartBtn.addEventListener('click', () => {
+                const quantity = parseInt(quantityInput.value);
+                const color = document.querySelector('.color-option.active').title;
+                const size = document.querySelector('.size-option.active').textContent;
+                
+                console.log(`Produto adicionado ao carrinho:
+                    Quantidade: ${quantity}
+                    Cor: ${color}
+                    Tamanho: ${size}`);
+                
+                // Aqui você pode implementar a lógica do carrinho
+            });
+        });
+    </script>
 </body>
 </html>
